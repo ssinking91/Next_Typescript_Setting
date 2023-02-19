@@ -1,9 +1,11 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "@/styles/Home.module.css";
-import Button from "@mui/material/Button";
+import { Typography, Button, useTheme } from "@mui/material";
 
 export default function Home() {
+  const theme = useTheme;
+
   return (
     <>
       <Head>
@@ -14,6 +16,7 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <Button variant="outlined">Outlined</Button>
+        <Typography variant="s48_w700">11</Typography>
       </main>
     </>
   );

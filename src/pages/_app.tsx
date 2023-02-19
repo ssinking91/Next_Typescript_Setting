@@ -7,10 +7,10 @@ import { QueryClient, QueryClientProvider } from "react-query";
 import { Hydrate } from "react-query/hydration";
 //
 import { CacheProvider, EmotionCache } from "@emotion/react";
-import { ThemeProvider, CssBaseline, createTheme } from "@mui/material";
+import { ThemeProvider, CssBaseline } from "@mui/material";
 import createEmotionCache from "@/utility/createEmotionCache";
-import lightThemeOptions from "@/styles/theme/lightThemeOptions";
 import "@/styles/globals.css";
+import muiTheme from "@/styles/theme/muiTheme";
 
 const App: NextComponentType<AppContext, AppInitialProps, AppProps> = ({
   Component,
@@ -18,8 +18,6 @@ const App: NextComponentType<AppContext, AppInitialProps, AppProps> = ({
 }) => {
   // @emotion
   const emotionCache: EmotionCache = createEmotionCache();
-  // @mui
-  const lightTheme = createTheme(lightThemeOptions);
   // @react-query
   const clientRef = useRef<QueryClient>();
 
@@ -38,7 +36,7 @@ const App: NextComponentType<AppContext, AppInitialProps, AppProps> = ({
       <QueryClientProvider client={clientRef.current}>
         <Hydrate state={pageProps.dehydratedState}>
           <CacheProvider value={emotionCache}>
-            <ThemeProvider theme={lightTheme}>
+            <ThemeProvider theme={muiTheme}>
               <CssBaseline />
               <Component {...pageProps} />
             </ThemeProvider>
