@@ -1,4 +1,34 @@
-export default function themeComponents() {
+declare module "@mui/material/styles" {
+  interface Theme {
+    layout: {
+      [key: string]: any;
+    };
+  }
+  // allow configuration using `createTheme`
+  interface ThemeOptions {
+    layout?: {
+      displayMiddle?: any;
+      displayCenter?: any;
+      displayMiddleCenter?: any;
+      displayMiddleTop?: any;
+      displayMiddleBottom?: any;
+      displayStartCenter?: any;
+      displayStartTop?: any;
+      displayStartBottom?: any;
+      displayEndCenter?: any;
+      displayEndTop?: any;
+      displayEndBottom?: any;
+      displayBetweenCenter?: any;
+      displayBetweenTop?: any;
+      displayBetweenBottom?: any;
+      displayAroundCenter?: any;
+      displayAroundTop?: any;
+      displayAroundBottom?: any;
+    };
+  }
+}
+
+export default function themeLayout() {
   return {
     displayMiddle: {
       display: "flex",

@@ -1,10 +1,10 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "@/styles/Home.module.css";
-import { Typography, Button, useTheme } from "@mui/material";
+import { Typography, Button, useTheme, Box } from "@mui/material";
 
 export default function Home() {
-  const theme = useTheme;
+  const theme = useTheme();
 
   return (
     <>
@@ -14,9 +14,15 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>
-        <Button variant="outlined">Outlined</Button>
-        <Typography variant="s48_w700">11</Typography>
+      <main>
+        <Box sx={{ ...theme.layout.displayMiddle }}>
+          <Button variant="outlined" sx={{ color: "red" }}>
+            Outlined
+          </Button>
+          <Typography variant="s48_w700" color="red">
+            11
+          </Typography>
+        </Box>
       </main>
     </>
   );

@@ -2,11 +2,13 @@ import { createTheme } from "@mui/material";
 import { ThemeOptions } from "@mui/material/styles";
 //
 import themeTypographys from "./typographys";
-// import themeComponents from "./components";
+import themeLayout from "./layout";
 
 const ThemeOptions: ThemeOptions = {
+  // configuration variables
   typography: themeTypographys(),
-  // components: themeComponents(),
+  // Custom variables
+  layout: themeLayout(),
 };
 
 const muiTheme = createTheme(ThemeOptions);

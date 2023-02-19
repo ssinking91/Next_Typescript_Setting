@@ -1,31 +1,7 @@
 // Typography
 declare module "@mui/material/styles" {
   interface TypographyVariants {
-    fontFamily: string;
-    s48_w700: React.CSSProperties;
-    s32_w700: React.CSSProperties;
-    s28_w700: React.CSSProperties;
-    s24_w700: React.CSSProperties;
-    s22_w700: React.CSSProperties;
-    s20_w700: React.CSSProperties;
-    s18_w400: React.CSSProperties;
-    s18_w500: React.CSSProperties;
-    s18_w700: React.CSSProperties;
-    s16_w400: React.CSSProperties;
-    s16_w500: React.CSSProperties;
-    s16_w700: React.CSSProperties;
-    s15_w400: React.CSSProperties;
-    s15_w500: React.CSSProperties;
-    s15_w700: React.CSSProperties;
-    s14_w400: React.CSSProperties;
-    s14_w500: React.CSSProperties;
-    s14_w700: React.CSSProperties;
-    s13_w400: React.CSSProperties;
-    s13_w500: React.CSSProperties;
-    s13_w700: React.CSSProperties;
-    s12_w400: React.CSSProperties;
-    s12_w500: React.CSSProperties;
-    s12_w700: React.CSSProperties;
+    [key: string]: any;
   }
 
   // allow configuration using `createTheme`
