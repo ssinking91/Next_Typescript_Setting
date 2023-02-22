@@ -5,7 +5,6 @@ import { Typography, Button, useTheme, Box } from "@mui/material";
 
 export default function Home() {
   const theme = useTheme();
-
   return (
     <>
       <Head>
